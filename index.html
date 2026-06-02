@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS CRUD</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <main class="page">
+      <header class="page-header">
+        <h1>Posts</h1>
+        <button id="open-dialog" type="button">Add post</button>
+      </header>
+
+      <section class="posts-section">
+        <div id="posts-list" class="posts-list"></div>
+      </section>
+    </main>
+
+    <dialog id="popup">
+      <div class="dialog-content">
+        <div class="dialog-header">
+          <h2 id="dialog-title">Add post</h2>
+          <button id="close-dialog" type="button">Close Dialog</button>
+        </div>
+
+        <form id="form" action="#">
+          <input type="hidden" name="id" id="postId" />
+
+          <div class="input-group">
+            <label for="title">Title</label>
+            <input name="title" type="text" id="title" required />
+          </div>
+
+          <div class="input-group">
+            <label for="body">Body</label>
+            <textarea name="body" id="body" required></textarea>
+          </div>
+
+          <div class="input-group">
+            <label for="userId">User ID</label>
+            <input name="userId" type="number" id="userId" required />
+          </div>
+
+          <button id="submit-button" type="submit">Add</button>
+        </form>
+      </div>
+    </dialog>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
